@@ -13,7 +13,7 @@ class Edit extends Component
     public function mount($company_id)
     {
         $this->companyId = $company_id;
-        $company = company::findOrFail($company_id);
+        $company = Company::findOrFail($company_id);
         $this->companyname = $company->companyname;
     }
 
@@ -24,7 +24,7 @@ class Edit extends Component
             'companyname' => 'required',
         ]);
 
-        $company = company::findOrFail($this->companyId);
+        $company = Company::findOrFail($this->companyId);
         $company->update([
             'companyname' => $this->companyname,
         ]);

@@ -8,14 +8,14 @@ use App\Models\Company;
 
 class Insert extends Component
 {
-     #[Validate('required|unique:companys,companyname')]
+     #[Validate('required|unique:Companys,companyname')]
     public $companyname = '';
 
     public function store()
     {
         $validated = $this->validate();
 
-        company::create($validated);
+        Company::create($validated);
 
         flash()->Success('تم الإضافة بنجاح.');
 
