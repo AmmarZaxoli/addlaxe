@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Invoices;
 
-use App\Models\buy_invoice;
+use App\Models\Buy_invoice;
 use App\Models\Company;
 use Livewire\Component;
 use Livewire\WithPagination;
