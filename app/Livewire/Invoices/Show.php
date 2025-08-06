@@ -3,7 +3,7 @@
 namespace App\Livewire\Invoices;
 
 use App\Models\buy_invoice;
-use App\Models\company;
+use App\Models\Company;
 use Livewire\Component;
 use Livewire\WithPagination;
 
