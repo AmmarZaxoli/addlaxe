@@ -34,7 +34,7 @@ class Show extends Component
 
     public function mount()
     {
-        $this->companys = company::all();
+        $this->companys = Company::all();
     }
 
     public function updatingSearch()
