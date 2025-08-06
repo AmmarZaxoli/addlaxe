@@ -66,7 +66,7 @@
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
                             </select>
                         </div>
-                        
+
                         <div class="col-md-6 mb-3 price-taxi-input">
                             <div class="input-wrapper">
                                 <label for="pricetaxi" class="input-label">أجرة التكسي</label>
@@ -144,12 +144,16 @@
                                 العروض
                             </button>
                         </div>
-                        <div class="col-md-2 mb-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="flexCheckDefault"
-                                    wire:model.live="cashornot">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    بيع نقدي
+                        <div class="col-md-3 mb-3">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="cashToggle"
+                                    wire:model.live="cashornot" style="width: 3em; height: 1.5em;">
+                                <label class="form-check-label ms-2 fw-bold" for="cashToggle">
+                                    <span x-text="$wire.cashornot ? 'نقدي' : 'آجل'"
+                                        :class="$wire.cashornot ? 'text-success' : 'text-danger'"></span>
+                                    <i
+                                        x-bind:class="$wire.cashornot ? 'fas fa-money-bill-wave text-success ms-1' :
+                                            'far fa-credit-card text-danger ms-1'"></i>
                                 </label>
                             </div>
                         </div>
